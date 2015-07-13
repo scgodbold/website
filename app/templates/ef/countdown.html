@@ -1,0 +1,97 @@
+{% extends 'ef/base.html' %}
+
+{% block title %}
+Trip Log
+{% endblock %}
+
+{% block css %}
+    <link rel='stylesheet' href='{{ url_for('static', filename='css/ef/countdown.css') }}'>
+    <!-- I am lazy, overrider the ef.css cover -->
+    <style>
+    #header {
+        background-image: url('/static/imgs/ef/portland.jpg');
+        background-position: 50% 50%;
+    }
+    </style>
+{% endblock %}
+
+{% block header_content %}
+    <div class='container' id='countdown-box'>
+        <h3 id='cd-title'>Time remaining until Portland:</h3>
+        <div id='clock' data-countdown="{{endDate}}">
+        </div>
+    </div>
+{% endblock %}
+
+{% block nav_bar %}
+    <li class='navbar-item'>
+        <a class='navbar-link' href='#intro' id='name'><strong>Emily's Trip Log</strong></a>
+    </li>
+    <div class='hide'>
+    <div id='hide-nav'>
+        <li class='navbar-item'>
+            <a class='navbar-link' href='#prev'>Past Trips</a>
+        </li>
+        <li class='navbar-item'>
+            <a class='navbar-link' href='#dist'>Distance Traveled</a>
+        </li>
+    </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class='hide'>
+    <!-- About Me Section
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class='row section-header' class='hide'>
+        <div class='container'>
+            <h5 class='section-text'>Past Trips</h5>
+        </div>
+    </div>
+    <div class='container' id='prev'>
+        <div class="row">
+            <div class="twelve column">
+                <p>dkfjalsdkfjaksdfj dkjfalksdf difjaoj fidoiqwn cioj kdjfa    ojdsjfo wlekjfaoisdjf aojdflkqjewl kjlasdj foajsdfl kqweoihqo iqjej    riudf iuahd fhekjrhq er erjkhudu fdhksj q eihrqkjwehjr q sdifhadifh    qw ekjqhewriuhdfi hakdf nqkewjhr qkuwehriquhw fijahdsfk jhqwkejrh q    kjwherkqjhe kjrhqkjwehrrkjhq wekrjhq khfkajsdhfkjhe</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Experience Section
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class='row section-header'>
+        <div class='container'>
+            <h5 class='section-text'>Distance Travled</h5>
+        </div>
+    </div>
+    <div class='container' id='dist'>
+        <div class="row">
+            <div class="twelve column">
+                <p>This index.html page is a placeholder with the CSS, font     and favicon. It's just waiting for you to add some content! If you     need some help hit up the <a href="http://www.getskeleton.com">Ske    leton documentation</a>.</p>
+            </div>
+        </div>
+    </div>
+    </div>
+{% endblock %}
+
+{% block js %}
+    <script src='/static/bower_components/jquery/dist/jquery.min.js'></script>
+    <script src='/static/bower_components/jquery.countdown/dist/jquery.countdown.min.js'></script>
+
+    <script>
+        $(function () {
+
+                $('[data-countdown]').each(function (){
+                    var $this = $(this);
+                    var final_date = $(this).data('countdown');
+                    $this.countdown(final_date).on('update.countdown', function(event) {
+                        var $this = $(this).html(event.strftime(''
+                                + '<span class="time">%-w</span> week%!w '
+                                + '<span class="time">%-d</span> day%!d '
+                                + '<span class="time">%H</span> hr '
+                                + '<span class="time">%M</span> min '
+                                + '<span class="time">%S</span> sec'));
+                    });
+            });
+        });
+    </script>
+{% endblock %}

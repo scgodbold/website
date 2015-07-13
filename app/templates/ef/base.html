@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Scott Godbold // {% block title %}{% endblock %}</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/ef/ef.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='bower_components/skeleton/css/normalize.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='bower_components/skeleton/css/skeleton.css') }}">
+  {% block css %}
+  {% endblock %}
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="/static/imgs/favicon.png">
+
+</head>
+<body id='intro'>
+  <!-- Header
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+      <div class='row'>
+          <div class='twelve column' id='header'>
+              {% block header_content %}
+              {% endblock %}
+          </div>
+      </div>
+
+  <!-- Navbar
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+      <div class='navbar'>
+          <div class='container'>
+              <ul class='navbar-list'>
+                  {% block nav_bar %}
+                  {% endblock %}
+              </ul>
+          </div>
+      </div>  <!-- End navbar -->
+  </div>
+
+
+  {% block content %}
+  {% endblock %}
+
+<!-- Javascript, apparently the end is where it goes
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+{% block js %}
+{% endblock js %}
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>

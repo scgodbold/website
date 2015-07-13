@@ -1,0 +1,22 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "description": "Personal Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scgodbold/website.git"
+  },
+  "author": "Scott Godbold <scgodbold@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/scgodbold/website/issues"
+  },
+  "homepage": "https://github.com/scgodbold/website#readme",
+  "devDependencies": {
+    "bower": "^1.4.1"
+  }
+}

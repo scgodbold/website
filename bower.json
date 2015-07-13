@@ -1,0 +1,21 @@
+{
+  "name": "web",
+  "version": "0.0.1",
+  "authors": [
+    "Scott Godbold <scgodbold@gmail.com>"
+  ],
+  "homepage": "https://github.com/scgodbold/website",
+  "description": "Personal website",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "skeleton": "~2.0.4",
+    "jquery.countdown": "~2.0.4"
+  }
+}

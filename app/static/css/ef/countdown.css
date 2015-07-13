@@ -1,0 +1,23 @@
+#countdown-box {
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+    background-color: rgba(77,77,77,0.85);
+    border-radius: 5px;
+    width: 50%;
+}
+#cd-title {
+    text-align: center;
+    color: white;
+    padding-top: 1rem;
+}
+#clock {
+    text-align: center;
+    color: white;
+    padding-bottom: 1rem;
+}
+.time {
+    font-size: 200%;
+}
+.hide {
+    display: none;
+}
