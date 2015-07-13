@@ -1,18 +1,43 @@
 {% extends 'ef/base.html' %}
 
 {% block title %}
-scgodbold // Greetings Emily
+Trip Log
 {% endblock %}
 
-{% block head %}
-<link href='/static/css/emily-holder.css' rel='stylesheet'>
+{% block css %}
+    <link rel='stylesheet' href='{{ url_for('static', filename='css/ef/holder.css') }}'>
+    <!-- I am lazy, overrider the ef.css cover -->
+    <style>
+    #header {
+        background-image: url('/static/imgs/ef/holder.jpg');
+        background-position: 50% 50%;
+    }
+    </style>
+{% endblock %}
+
+{% block header_content %}
+    <div class='container' id='countdown-box'>
+        <h4 id='cd-title'>Greetings Emily!</h4>
+        <h6 id='cd-title'>Our next trip is in the works, stay tuned!</h6>
+        </div>
+    </div>
+{% endblock %}
+
+{% block nav_bar %}
+    <li class='navbar-item'>
+        <a class='navbar-link' href='#intro' id='name'><strong>Emily's Trip Log</strong></a>
+    </li>
+    <div class='hide'>
+    <div id='hide-nav'>
+        <li class='navbar-item'>
+            <a class='navbar-link' href='#prev'>Past Trips</a>
+        </li>
+        <li class='navbar-item'>
+            <a class='navbar-link' href='#dist'>Distance Traveled</a>
+        </li>
+    </div>
+    </div>
 {% endblock %}
 
 {% block content %}
-	<div id='headbox' class='jumbotron'>
-		<div class='page-header'>
-			<h1 style='text-align: center'>Greetings Emily!</h1>
-			<h2 style='text-align: center'><small>Our next trip is in the works, stay tuned!</small></h2>
-		</div>
-	</div>
 {% endblock %}

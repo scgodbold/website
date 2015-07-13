@@ -1,0 +1,15 @@
+#countdown-box {
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+    background-color: rgba(77,77,77,0.85);
+    border-radius: 5px;
+    width: 50%;
+}
+#cd-title {
+    text-align: center;
+    color: white;
+    padding-top: 1rem;
+}
+.hide {
+    display: none;
+}

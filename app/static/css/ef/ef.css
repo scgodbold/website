@@ -36,7 +36,6 @@
 #header {
     margin-top: 6.5rem;
     height: 750px;
-    background-image: url('/static/imgs/cover.jpg');
     background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
