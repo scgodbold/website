@@ -36,9 +36,9 @@
 #header {
     margin-top: 6.5rem;
     height: 750px;
-    background-image: url('/static/imgs/cover.jpg');
+    background-image: url('/static/imgs/cover1.jpg');
     background-size: cover;
-    background-position: bottom;
+    background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
@@ -66,4 +66,16 @@
     color: #222;
     height: 100%;
     padding-top: 2.5rem;
+}
+.section-body {
+    min-height: auto;
+}
+/* education styles */
+#logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.center-text {
+    text-align: center;
 }
