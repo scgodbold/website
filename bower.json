@@ -1,6 +1,6 @@
 {
   "name": "web",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "authors": [
     "Scott Godbold <scgodbold@gmail.com>"
   ],
@@ -12,10 +12,11 @@
     "node_modules",
     "bower_components",
     "test",
-    "tests"
+    "tests",
+    "app/static/bower_components"
   ],
   "dependencies": {
-    "skeleton": "~2.0.4",
-    "jquery.countdown": "~2.0.4"
+    "materialize": "~0.97.1",
+    "jquery.countdown": "~2.1.0"
   }
 }
