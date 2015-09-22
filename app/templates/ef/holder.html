@@ -6,38 +6,16 @@ Trip Log
 
 {% block css %}
     <link rel='stylesheet' href='{{ url_for('static', filename='css/ef/holder.css') }}'>
-    <!-- I am lazy, overrider the ef.css cover -->
-    <style>
-    #header {
-        background-image: url('/static/imgs/ef/holder.jpg');
-        background-position: 50% 50%;
-    }
-    </style>
 {% endblock %}
 
-{% block header_content %}
-    <div class='container' id='countdown-box'>
-        <h4 id='cd-title'>Greetings Emily!</h4>
-        <h6 id='cd-title'>Our next trip is in the works, stay tuned!</h6>
+{% block body %}
+    <div id='header' class='valign-wrapper'>
+        <div class='banner grey lighten-4 z-depth-2'>
+            <div class='container'>
+                <h1 class='center-align'>Welcome Emily!</h1>
+                <br>
+                <h4 class='center-align'>Our next trip is in the works! Stay tuned for updates.</h4>
+            </div>
         </div>
     </div>
-{% endblock %}
-
-{% block nav_bar %}
-    <li class='navbar-item'>
-        <a class='navbar-link' href='#intro' id='name'><strong>Emily's Trip Log</strong></a>
-    </li>
-    <div class='hide'>
-    <div id='hide-nav'>
-        <li class='navbar-item'>
-            <a class='navbar-link' href='#prev'>Past Trips</a>
-        </li>
-        <li class='navbar-item'>
-            <a class='navbar-link' href='#dist'>Distance Traveled</a>
-        </li>
-    </div>
-    </div>
-{% endblock %}
-
-{% block content %}
 {% endblock %}

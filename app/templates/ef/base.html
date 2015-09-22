@@ -1,67 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-
-  <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta charset="utf-8">
-  <title>Scott Godbold // {% block title %}{% endblock %}</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
-
-  <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/ef/ef.css') }}">
-  <link rel="stylesheet" href="{{ url_for('static', filename='bower_components/skeleton/css/normalize.css') }}">
-  <link rel="stylesheet" href="{{ url_for('static', filename='bower_components/skeleton/css/skeleton.css') }}">
+  <title>{% block title%}{% endblock %}</title>
+  <!--Import Google Icon Font-->
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="/static/css/materialize.min.css"  media="screen,projection"/>
   {% block css %}
   {% endblock %}
 
-  <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="/static/imgs/favicon.png">
-
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
-<body id='intro'>
-  <!-- Header
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-      <div class='row'>
-          <div class='twelve column' id='header'>
-              {% block header_content %}
-              {% endblock %}
-          </div>
-      </div>
 
-  <!-- Navbar
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container">
-      <div class='navbar'>
-          <div class='container'>
-              <ul class='navbar-list'>
-                  {% block nav_bar %}
-                  {% endblock %}
-              </ul>
-          </div>
-      </div>  <!-- End navbar -->
-  </div>
-
-
-  {% block content %}
+<body>
+  {% block body %}
   {% endblock %}
-
-<!-- Javascript, apparently the end is where it goes
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-{% block js %}
-{% endblock js %}
-<!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="/static/js/materialize.min.js"></script>
+  {% block js %}
+  {% endblock %}
 </body>
 </html>
