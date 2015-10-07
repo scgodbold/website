@@ -49,6 +49,7 @@
 #banner {
     width: 100%;
 }
+
 // Experience
 .job-img {
     height: 300px;
@@ -56,6 +57,8 @@
 .job {
     margin-bottom: 25px;
 }
+
+// Projects
 
 /* Weird bottom stuff I cant move */
 .section { 
