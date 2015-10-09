@@ -11,7 +11,7 @@ ef = Blueprint('ef', __name__, url_prefix='/ef')
 def tripTimer():
     """Counts down to emily's next trip"""
     today = date.today()
-    end = date(2015, 9, 18)
+    end = date(2015, 10, 23)
     start = date(2015, 9, 18)
     endDate = '{}/{}/{}'.format(end.year, end.month, end.day)
     startDate = '{}/{}/{}'.format(start.year, start.month, start.day)
