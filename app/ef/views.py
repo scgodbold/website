@@ -11,8 +11,8 @@ ef = Blueprint('ef', __name__, url_prefix='/ef')
 def tripTimer():
     """Counts down to emily's next trip"""
     today = date.today()
-    end = date(2016, 02, 11)
-    start = date(2015, 12, 23)
+    end = date(2016, 03, 11)
+    start = date(2016, 02, 11)
     endDate = '{}/{}/{}'.format(end.year, end.month, end.day)
     startDate = '{}/{}/{}'.format(start.year, start.month, start.day)
     diff = today - end
@@ -21,8 +21,8 @@ def tripTimer():
     return render_template('ef/countdown.html', startDate=startDate, endDate=endDate)
 
 
-#@ef.route('/test', methods=['GET'])
-#def test_holder():
+# @ef.route('/test', methods=['GET'])
+# def test_holder():
 #    endDate = '2015/12/25'
 #    startDate = '2015/09/20'
 #    return render_template('ef/countdown.html', endDate=endDate, startDate=startDate)
