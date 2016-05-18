@@ -1,67 +1,132 @@
-.content-container {
-    width: 100%;
-    overflow-y: scroll;
+/* Sidebar css */
+#sidenav {
+    background-color: #FFFFFF;
 }
-.section-container {
-    width: 70%;
-    margin: auto;
-    margin-top: 35px;
+#sidenav-header {
+    padding: 16px;
+    background-color: #4D6DE3;
 }
-@media only screen and (min-width: 1024px) {
-    .content-container {
-        width: 100%;
-        overflow-y: scroll;
-        padding-left: 240px;
+.sidenav-title {
+    font-size: 32px;
+    color: #F1FCFD;
+}
+.sidenav-subtitle {
+    font-size: 14px;
+    color: #FFFFFF;
+}
+.sidenav-item-align {
+    vertical-align: middle;
+}
+.sidenav-item-text {
+    margin-left: 24px;
+    color: #393737;
+}
+.name-bar {
+    background-color: #393737;
+}
+/* Set offset to account for sidebar on Large Screens */
+#content {
+    padding-left: 240px;
+}
+/* Sidebar is hidden so no offset needed */
+@media only screen and (max-width : 992px) {
+    #content {
+        padding-left: 0;
     }
 }
-
-/* Side bar */
-#logo {
-    height: 200px;
-    color: white;
-    padding: 15px;
+/* Main Section: Misc Pieces */
+body {
+    background-color: #f1f1f1;
 }
-.logo-title {
-    margin: 0;
+a {
+    color: #4D6DE3;
 }
-.logo-text {
-    margin: 0;
-    color: #f5f5f5;
-}
-
-/* Sections */
 .section-header {
-    background-color: #42A5F5;
-    padding-left: 50px;
-    padding-top: 100px;
-    color: #f5f5f5;
-    height: 200px;
+    height: 122px;
+    background-color: #4D6DE3;
+    padding: 25px;
 }
-#introduction {
-    height: 750px;
-    width: 100%;
-    background-image: url('/static/imgs/cover2.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+.section-title {
+    font-size: 50px;
+    vertical-align: middle;
+    color: #F1FCFD;
 }
-#banner {
-    width: 100%;
+.section {
+    padding: 25px;
 }
-
-// Experience
-.job-img {
-    height: 300px;
+.ico-align {
+    vertical-align: middle;
 }
-.job {
-    margin-bottom: 25px;
+/* Skills section */
+.skill {
+    max-width: 100px;
+    max-height: 150px;
+    display: inline-block;
+    margin-right: 10px;
 }
-
-// Projects
-
-/* Weird bottom stuff I cant move */
-.section { 
-    margin: 0;
+.skill-image {
+    padding: 4px;
+    height: 125px;
+}
+.skill-content {
     padding: 0;
+    border-radius: 0 0 2px 2px;
+    height: 25px;
+}
+.skill-name {
+    vertical-align: middle;
+    color: #393737;
+}
+.skill-subsection {
+    color: #393737;
+}
+/* Experience Section */
+.experience-header {
+    vertical-align: middle;
+    margin-bottom: 15px;
+}
+.experience-title {
+    color: #393737;
+    font-size: 28px;
+}
+.experience-date {
+    margin-top: 10px;
+}
+.exp-align {
+    vertical-align: middle;
+}
+.experience-content li {
+    padding-bottom: 6px;
+    color: #393737;
+}
+/* Education */
+.education-title {
+    font-size: 2em;
+    color: #393737;
+}
+.education-date {
+    margin-top: 10px;
+}
+.education-content {
+    color: #393737;
+}
+/* Projects */
+.project-card {
+    color: #393737;
+}
+.project-title {
+    font-size: 2em;
+}
+.project-header {
+    margin-bottom: 15px;
+}
+.project-tech {
+    font-size: 16px;
+}
+.project-card span{
+    color: #393737; !important
+}
+.project-owner {
+    margin-left: 12px;
+    margin-bottom: 8px;
 }
