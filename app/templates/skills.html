@@ -1,0 +1,41 @@
+{% macro skill(name, img='misc.png') %}
+    <div class='card skill'>
+        <div class='card-image skill-image'>
+            <img src='static/img/skill_icons/{{img}}' alt='{{name}}'>
+        </div>
+        <div class='skill-content '>
+            <div class='center-align'>
+                <span class='skill-name'>{{name}}</span>
+            </div>
+        </div>
+    </div>
+{% endmacro %}
+<div class='section-header' id='skills'>
+    <div class='right-align'>
+        <span class='section-title'>Skills</span>
+    </div>
+</div>
+
+<div class='section'>
+    <h5 class='skill-subsection'>Services</h5>
+    {{ skill('Linux', 'linux.png') }}
+    {{ skill('Amazon AWS', 'aws.ico') }}
+    {{ skill('CentOS', 'centos.jpg') }}
+    {{ skill('Splunk', 'splunk.png') }}
+    {{ skill('RabbitMQ', 'rabbitmq.png') }}
+    {{ skill('Docker', 'docker.png') }}
+    {{ skill('SQL', 'sql.png') }}
+    {{ skill('DNS') }}
+    {{ skill('Postfix') }}
+    {{ skill('LDAP') }}
+    <h5 class='skill-subsection'>Languages</h5>
+    {{ skill('Python', 'python.png') }}
+    {{ skill('Bash', 'bash.png') }}
+    {{ skill('Flask', 'flask.png') }}
+    {{ skill('Javascript', 'javascript.png') }}
+    {{ skill('Java', 'java.png') }}
+    {{ skill('C++', 'cpp.png') }}
+    <h5 class='skill-subsection'>Other</h5>
+    {{ skill('Vim', 'vim.png') }}
+    {{ skill('Tmux') }}
+</div>

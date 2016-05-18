@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block css %}
+<link rel='stylesheet' href='static/css/base.css'>
+{% endblock %}
+
+{% block body %}
+{% include 'sidebar.html' %}
+
+<div id='content'>
+    {% include 'skills.html' %}
+    {% include 'experience.html' %}
+    {% include 'projects.html' %}
+    {% include 'education.html' %}
+    {% include 'contact.html' %}
+</div>
+{% endblock %}
+
+{% block js %}
+<script src='static/js/base.js'></script>
+{% endblock %}
