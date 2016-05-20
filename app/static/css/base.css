@@ -5,6 +5,7 @@
 #sidenav-header {
     padding: 16px;
     background-color: #4D6DE3;
+    line-height: normal;
 }
 .sidenav-title {
     font-size: 32px;
