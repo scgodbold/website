@@ -67,3 +67,6 @@ secrets.py
 # Bower & node
 bower_components/
 node_modules/
+
+# Mac Bits
+.DS_Store
