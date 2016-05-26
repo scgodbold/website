@@ -10,7 +10,7 @@
     <div class='card'>
         <div class='card-content'>
             <div class='row'>
-                <form class='col s12'>
+                <form class='col s12' action='/contact_submit' method='POST'>
                     <div class='input-field'>
                         <input class='validate' id='name' type='text' name='name' placeholder='Enter Name' required>
                         <label for='name'>Name</label>
@@ -24,6 +24,10 @@
                     <div class='input-field'>
                         <textarea id='message' class='materialize-textarea validate' name='message' required></textarea>
                         <label for='message'>Message</label>
+                    </div>
+
+                    <div class='input-field'>
+                        <input class='btn' type='submit' value='Send Message'>
                     </div>
                 </form>
             </div>
