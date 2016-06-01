@@ -1,0 +1,19 @@
+<script>
+    $(document).ready(function() {
+        {% with messages = get_flashed_messages(with_categories=True) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    {% if category == 'danger' %}
+                        Materialize.toast('{{message}}', 4000, 'red lighten-3 black-text')
+                    {% elif category == 'success' %}
+                        Materialize.toast('{{message}}', 4000, 'green lighten-3 black-text')
+                    {% elif category == 'warning' %}
+                        Materialize.toast('{{message}}', 4000, 'yellow lighten-3 black-text')
+                    {% else %}
+                        Materialize.toast('{{message}}', 4000)
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    });
+</script>

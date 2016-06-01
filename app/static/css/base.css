@@ -89,7 +89,8 @@ a {
 }
 .experience-title {
     color: #393737;
-    font-size: 28px;
+    font-size: 34px;
+    font-weight: bold;
 }
 .experience-date {
     margin-top: 10px;
@@ -103,7 +104,8 @@ a {
 }
 /* Education */
 .education-title {
-    font-size: 2em;
+    font-size: 34px;
+    font-weight: bold;
     color: #393737;
 }
 .education-date {
@@ -117,7 +119,9 @@ a {
     color: #393737;
 }
 .project-title {
-    font-size: 2em;
+    font-size: 34px;
+    font-weight: bold;
+    color: #393737;
 }
 .project-header {
     margin-bottom: 15px;
