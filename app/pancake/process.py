@@ -10,11 +10,11 @@ def imgur_tag_search(tag):
     tag_url = '{imgur_base}/gallery/t/{tag}'.format(imgur_base=app.config['IMGUR_URL'],
                                                     tag=tag)
     auth_header = {'Authorization': 'Client-ID {client_id}'.format(client_id=app.config['IMGUR_CLIENT_ID'])}
-    resp_json = requests.get(tag_url, headers=auth_header).json()
-    if resp_json.status_code != 200:
+    results = requests.get(tag_url, headers=auth_header)
+    if results.status_code != 200:
         return None
     safe_images = []
-    for item in resp_json['data']['items']:
+    for item in results.json()['data']['items']:
         if not item['nsfw']:
             # only safe images, so not - not safe for work
             # Wrote that out to make sure I had that right in my head
@@ -39,7 +39,7 @@ def process_triggers(text):
             resp_text.append('Good day sir')
         elif word == 'bears':
             days = (datetime(2021, 1, 1) - datetime.now()).days
-            resp_text.append('There are roughly {days} days left on Jay Cutlers contract.'.format(days))
+            resp_text.append('There are roughly {days} days left on Jay Cutlers contract.'.format(days=days))
         elif word == 'harbaugh':
             harbaugh_img = imgur_tag_search('harbaugh')
             if harbaugh_img is not None:
@@ -49,6 +49,9 @@ def process_triggers(text):
         img = imgur_tag_search('goblue')
         if img is not None:
             resp_text.append(img)
+
+    if len(resp_text) < 2:
+        return resp_text
     return choice(resp_text)
 
 
@@ -56,10 +59,13 @@ def proccess_hashtags(text):
     tags = []
     words = text.lower().split(' ')
     for word in words:
-        if word[0] == '#':
-            img = imgur_tag_search(word[1:])
-            if img is not None:
-                tags.append(img)
+        try:
+            if word[0] == '#':
+                img = imgur_tag_search(word[1:])
+                if img is not None:
+                    tags.append(img)
+        except:
+            continue
     return tags
 
 
