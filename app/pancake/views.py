@@ -24,4 +24,4 @@ def endpoint():
         if response is not None:
             response['bot_id'] = app.config['GROUPME_BOTS'][json['group_id']]
             requests.post(app.config['GROUPME_URL'], response)
-    return None
+    return {'message': 'message recieved, thank you'}
