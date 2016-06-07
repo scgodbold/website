@@ -27,7 +27,7 @@ def imgur_tag_search(tag):
 
 def process_triggers(text):
     resp_text = []
-    words = filter(str.isalnum, text.lower()).split(' ')
+    words = [filter(str.isalnum, str(x)) for x in text.lower().split(' ')]
     for word in words:
         if word == 'marcus':
             resp_text.append('Jarvis*')
