@@ -15,7 +15,7 @@ def imgur_tag_search(tag):
         return None
     safe_images = []
     for item in results.json()['data']['items']:
-        if not item['nsfw']:
+        if not item['nsfw'] and not item['is_album']:
             # only safe images, so not - not safe for work
             # Wrote that out to make sure I had that right in my head
             safe_images.append(item)
@@ -27,7 +27,7 @@ def imgur_tag_search(tag):
 
 def process_triggers(text):
     resp_text = []
-    words = text.lower().split(' ')
+    words = filter(str.isalnum, text.lower()).split(' ')
     for word in words:
         if word == 'marcus':
             resp_text.append('Jarvis*')
@@ -50,9 +50,9 @@ def process_triggers(text):
         if img is not None:
             resp_text.append(img)
 
-    if len(resp_text) < 2:
-        return resp_text
-    return choice(resp_text)
+    if len(resp_text) == 0:
+        return []
+    return resp_text
 
 
 def proccess_hashtags(text):
