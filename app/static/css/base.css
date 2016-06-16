@@ -62,7 +62,9 @@ a {
 /* Skills section */
 .skill {
     max-width: 100px;
+    min-width: 100px;
     max-height: 150px;
+    min-height: 150px;
     display: inline-block;
     margin-right: 10px;
 }
@@ -146,7 +148,9 @@ a {
 }
 .sm-card {
     max-width: 100px;
+    min-width: 100px;
     max-height: 150px;
+    min-height: 150px;
     display: inline-block;
     margin-right: 10px;
 }
