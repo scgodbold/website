@@ -1,0 +1,22 @@
+body {
+    background-color: #f1f1f1;
+    color: #393737;
+}
+#nav {
+    background-color: #4d6de3;
+}
+#tag-search-btn {
+    width: 100%;
+    background-color: #3498db;
+}
+.post-tag {
+    margin-bottom: 5px;
+}
+.open-post, .open-post:hover{
+    float: right;
+    background-color: #3498db;
+}
+#post-title {
+    font-weight: bold;
+    font-size: 4rem;
+}

@@ -1,8 +1,10 @@
 import boto3
+import datetime
 
 from flask import Blueprint, render_template, flash, request, redirect
 
 from app import app
+# from app import flatpages  # For Blogs
 
 site = Blueprint('site', __name__)
 
@@ -38,3 +40,44 @@ def send_message():
     else:
         flash('Your message is on its way! I will get back to you as soon as possible!', 'success')
     return redirect('/')
+
+'''
+
+# ------------------------------------------------- #
+# Blogs Coming soon! Dont want this out just yet... #
+# ------------------------------------------------- #
+
+@site.route('/blog', methods=['GET'])
+def posts():
+    tag = request.args.get('tag', None)
+    posts = [post for post in flat_pages]
+    posts.sort(key=lambda item: item['date'], reverse=False)
+    if tag is not None:
+        tag = tag.lower()
+        tag_posts = []
+        for post in posts:
+            if tag in [x.lower() for x in post['tags']]:
+                tag_posts.append(post)
+        return render_template('blog/posts.html', posts=tag_posts)
+    return render_template('blog/posts.html', posts=posts)
+
+
+@site.route('/blog/post/<int:year>/<string:name>', methods=['GET'])
+def post(year, name):
+    path = '{}/{}'.format(year, name)
+    print path
+    post = flat_pages.get_or_404(path)
+    return render_template('blog/post.html', post=post)
+
+'''
+
+
+@site.route('/ef', methods=['GET'])
+@site.route('/ef/countdown', methods=['GET'])
+def trip_timer():
+    date = open(app.config['EF_COUNTDOWN_FILE'], 'r').read().strip()
+    dt = datetime.datetime.strptime(date, '%d %B %Y')
+
+    if dt < datetime.datetime.now():
+        return render_template('ef/holder.html')
+    return render_template('ef/countdown.html', date=date)

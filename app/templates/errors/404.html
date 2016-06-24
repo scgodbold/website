@@ -1,0 +1,25 @@
+{% extends 'errors/error_base.html' %}
+
+{% block error_title %}
+Page Not Found
+{% endblock %}
+
+{% block errorcard_title %}
+Oh No! Seems that I cannot locate the page you were looking for! <small>(Error: 404)</small>
+{% endblock %}
+
+{% block error_msg %}
+Seems that you have mucked about and found your way to a page that isn't a page. Sorry to disappoint you, perhaps this offering of (hopefully helpful) links will help you locate what you were looking for!
+{% endblock %}
+
+{% block error_extras %}
+<ul>
+    <li class='error-link'><a href='/'>Home</a></li>
+    <!-- Blog link, once this is live 
+    <li class='error-link'><a href='/blog'>Blog</a></li>
+    -->
+    {% if prev %}
+    <li class='error-link'><a href='{{prev}}'>Return from whence I came</a></li>
+    {% endif %}
+</ul>
+{% endblock %}

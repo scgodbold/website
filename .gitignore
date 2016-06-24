@@ -70,3 +70,9 @@ node_modules/
 
 # Mac Bits
 .DS_Store
+
+# Countdown Text Shouldnt be in git
+app/static/countdown.txt
+
+# Img files not hosted in git repo, move past those
+app/static/img

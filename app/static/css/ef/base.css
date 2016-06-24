@@ -1,0 +1,145 @@
+/* resets and general styles */
+
+*{
+    margin: 0 auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+::-moz-selection{
+    color: #FFFFFF;
+    background: #FF5722;
+}
+
+::selection{
+    color: #FFFFFF;
+    background: #FF5722;
+}
+
+body{
+    font: normal 16px 'Roboto', sans-serif;
+    position: absolute; 
+    height: 100%;
+    width: 100%;
+}
+
+div.wrapper{
+    width: calc(4*225px);
+    margin: 0 auto;
+}
+
+/* page layout */
+
+/* header */
+
+header{
+    width: 100%;
+    height: 50%;
+    background: #0E2F56;
+    position: relative;
+    z-index: 10;
+}
+
+/* section */
+
+section{
+    width: 100%;
+    height: 50%;
+    position: relative;
+    z-index: 20;
+}
+
+section h1, section p.meta{
+    color: #FFFFFF;
+    margin-bottom: 15px;
+}
+
+section hgroup{margin-top: -360px;}
+
+section p.numbers{font-size: 6em;}
+section p.meta,section p.strings{font-size: 1.5em;}
+section h1{font-size: 4.5em;}
+
+/* countdown styles */
+
+div#countdown{color: #353535;}
+
+div#countdown p{
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+}
+
+p.numbers{
+    width: 100%;
+    height: 85%;
+    background: #FFFFFF;
+    margin-top: -25px;
+    padding-top: 100px;
+}
+
+p.strings{
+    width: 100%;
+    height: auto;
+    padding: 30px 0;
+    background: #FF304F;
+    color: #FFFFFF;
+}
+
+div.cd-box{
+    width: 210px;
+    height: 360px;
+    background: #FFFFFF;
+    float: left;
+    padding: 25px 0 0 0;
+    margin: 30px 15px 0 0;
+    -webkit-box-shadow: 5px 6px 9px 1px rgba(53, 53, 53, 0.5);
+    -moz-box-shadow: 5px 6px 9px 1px rgba(53, 53, 53, 0.5);
+    box-shadow: 5px 6px 9px 1px rgba(53, 53, 53, 0.5);
+}
+
+/* footer */
+
+footer{
+    position: relative;
+    top: 60px;
+}
+
+footer p{
+  color: #787878;
+}
+
+/* Background stuff */
+.background {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-image: url('/static/img/ef/background.jpg');
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+/* Holder Stuff */
+.holder-bg {
+    height: 100%;
+    width: 100%;
+    background-image: url('/static/img/ef/holder.jpg');
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    min-height: 300px;
+}
+.holder-container {
+    padding-top: 8rem;
+}
+.holder-header {
+    font-size: 48px;
+    font-weight: bold;
+}
+.holder-text {
+    font-size: larger;
+    font-weight: lighter;
+}

@@ -1,0 +1,41 @@
+{% extends 'ef/base.html' %}
+
+{% block title %}
+Emily // Days Till The Next Adventure
+{% endblock %}
+
+{% block body %}
+<section>
+  <div class="wrapper">
+
+      <div id="countdown" data-end='{{date}}'>
+      <div class="cd-box">
+        <p class="numbers days">00</p><br>
+        <p class="strings timeRefDays">Days</p>
+      </div>
+      <div class="cd-box">
+        <p class="numbers hours">00</p><br>
+        <p class="strings timeRefHours">Hours</p>
+      </div>
+      <div class="cd-box">
+        <p class="numbers minutes">00</p><br>
+        <p class="strings timeRefMinutes">Minutes</p>
+      </div>
+      <div class="cd-box">
+        <p class="numbers seconds">00</p><br>
+        <p class="strings timeRefSeconds">Seconds</p>
+      </div>
+    </div><!-- end div#countdown -->
+    
+    <footer>
+    </footer>
+  
+  </div><!-- end div.wrapper -->
+</section>
+<div class='background'>
+</div>
+{% endblock %}
+
+{% block js %}
+<script src='/static/js/ef.js'></script>
+{% endblock %}
